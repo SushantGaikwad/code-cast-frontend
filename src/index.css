@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-800;
+}
+
+button {
+  @apply transition duration-200 ease-in-out;
+}
+
+/* Custom container for consistent max-width */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.main-container{
+    width: 60%;
+    background-color: aqua;
+    margin:auto;
+    height: auto;
+    padding: 20px;
+}
+
+.link{
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    background-color: blue;
+}
+
+.actions-buttons{
+    margin: 10px;
+    padding: 10px;
+}
+
+.app-container{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    height: fit-content;
+}
+
+.input{
+    margin: 10px;
+}
+
+.video-container{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items when fewer than 2 columns */
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto; /* Center container */
+}
+
+
+.video-card {
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: aquamarine;
+    box-shadow: 10px;
+    width: fit-content;
+    padding: 10px;
+}
+
+.item {
+    flex: 1 1 calc(50% - 20px); /* Each item takes ~50% width minus gap */
+    min-width: 150px;
+    max-width: calc(50% - 20px); /* Ensure items don't exceed 50% */
+    box-sizing: border-box; /* Include padding/border in width */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* For single item, override to full width */
+  .video-container:has(.item:nth-child(1):last-child) .item {
+    flex: 0 1 100%; /* Single item takes full width */
+    max-width: 100%;
+  }
+
+p{
+    font-size: 18px;
+}
+
+.select-dropdown{
+    width: 150px;
+}
+
+.comment-header{
+    color: blue;
+    font-size: 20px;
+}
+
+
+.comment-context{
+    color: violet
+}
