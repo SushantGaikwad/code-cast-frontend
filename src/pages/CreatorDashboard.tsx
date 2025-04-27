@@ -3,6 +3,7 @@ import api from '../utils/api';
 
 import { Video } from '../types';
 import { Button, Input, Select } from 'antd';
+import VideoCard from '../components/VideoCard';
 
 interface FormState {
   title: string;
@@ -107,6 +108,16 @@ const CreatorDashboard: React.FC = () => {
         <div className='video-container'>
         {videos.map((video) => (
           <div key={video._id} className="bg-white p-4 rounded shadow mb-4 input video-card grid grid-cols-1 md:grid-cols-3 gap-4 item">
+                   <div>
+       <iframe
+        src={video.embedLink}
+        title={video.title}
+        className="w-full h-96 rounded-lg"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        style={{maxWidth: '150px'}}
+    
+      ></iframe>
+    </div>
             <h3 className="text-lg font-bold">{video.title}</h3>
             <p>Views: {video.views}</p>
             <p>Likes: {video.likes}</p>

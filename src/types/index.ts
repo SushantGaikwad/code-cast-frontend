@@ -26,4 +26,5 @@ export interface User {
   email: string;
   role: "creator" | "viewer" | "admin";
   token: string;
+  watchLater?: string[]; 
 }

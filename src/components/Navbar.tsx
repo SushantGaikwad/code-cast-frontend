@@ -68,6 +68,11 @@ return (
                       Admin
                     </Link>
                   )}
+                   {user.role === 'viewer' && (
+                    <Link to="/watchLater" className="hover:text-indigo-200 transition link">
+                      Watch Later
+                    </Link>
+                  )}
                   <Button
                     onClick={handleLogout}
                     className="hover:text-indigo-200 transition"

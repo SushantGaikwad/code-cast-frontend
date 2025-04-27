@@ -10,6 +10,7 @@ import { User } from './types';
 import { ProtectedRoute } from './ProtectedRoute';
 import { Navbar } from './components/Navbar';
 import { Button } from 'antd';
+import WatchLaterDashboard from './pages/WatchLaterDashboard';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
             <ProtectedRoute path="/admin" component={AdminDashboard} role='admin' />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+            <Route path="/watchLater" component={WatchLaterDashboard} />
           </Switch>
         </main>
       </div>

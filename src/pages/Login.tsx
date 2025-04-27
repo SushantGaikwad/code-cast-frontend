@@ -64,7 +64,7 @@ const Login: React.FC = () => {
             value={form.password}
             onChange={(e) => setForm({ ...form, password: e.target.value })}
             className="w-full p-2 border rounded input"
-            placeholder='Enter your email'
+            placeholder='Enter your password'
             required
           />
         </div>
