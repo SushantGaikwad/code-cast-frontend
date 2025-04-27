@@ -88,6 +88,7 @@ button {
     box-sizing: border-box; /* Include padding/border in width */
     padding: 10px;
     text-align: center;
+    margin: 10px;
   }
   
   /* For single item, override to full width */

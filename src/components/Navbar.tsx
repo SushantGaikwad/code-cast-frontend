@@ -11,6 +11,8 @@ interface INavbar {
 export const Navbar = () => {
 const [user, setUser] = useState<User | null>(null);
 
+const history = useHistory();
+
   const updateUser = () => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -44,6 +46,7 @@ const [user, setUser] = useState<User | null>(null);
     localStorage.removeItem('token');
     setUser(null);
     window.dispatchEvent(new Event('storageChange')); // Trigger update
+    history.push('/');
   };
 
 return (
